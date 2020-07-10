@@ -1,6 +1,5 @@
 def intersection(arrays):
     cache = {}
-
     for array in arrays:
         for num in array:
             if num not in cache:
