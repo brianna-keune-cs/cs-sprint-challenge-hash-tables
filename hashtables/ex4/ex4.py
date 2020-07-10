@@ -1,10 +1,14 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    cache = {}
+    for i in a:
+        if i < 0:
+            postive_i = i * -1
+            if postive_i in a:
+                cache[postive_i] = True
+            else:
+                cache[postive_i] = False
 
-    return result
+    return [key for key, value in cache.items() if value is True]
 
 
 if __name__ == "__main__":
