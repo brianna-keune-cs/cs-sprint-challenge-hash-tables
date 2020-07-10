@@ -14,5 +14,8 @@ def reconstruct_trip(tickets, length):
         route.append(next_destination)
         next_destination = cache[next_destination]
 
+    # this is for the tests, according to the read me example
+    # the source that has a destination for "NONE"
+    # is not suppose to be included in the route order.
     route.append("NONE")
     return route
